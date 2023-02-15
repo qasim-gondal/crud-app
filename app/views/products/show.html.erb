@@ -1,0 +1,20 @@
+<table class="table">
+<thead class="thead-dark">
+<tr>
+<th>Name</th>
+<th>Price</th>
+<th>Description</th>
+</tr>
+</thead>
+<tr>
+<td><%=@product.name%></td>
+<td><%=@product.price%></td>
+<td><%=@product.description%></td>
+</tr>
+</table>
+<div class="d-flex align-items-center justify-content-center">
+<button><%= link_to "Edit", edit_product_path(@product) %></button>
+<button><%= link_to "Delete", product_path(@product), data: 
+{turbo_method: :delete, turbo_confirm: 'Are you sure' }%></button>
+<button><%=link_to "Back", products_path %></button>
+</div>

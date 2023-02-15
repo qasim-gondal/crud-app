@@ -1,0 +1,15 @@
+<div class="d-grid align-items-center justify-content-center">
+<div class="card" style="width: 18rem;">
+  <div class="card-header">
+    STOCK ITEMS
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item"><%@products.each do |product|%>
+<%= link_to product.name, product %><br><br>
+<%end%></li>
+  <div class="card-body">
+    <div class="btn btn-light"><%= link_to "Add Product", new_product_path %></div>
+  </div>
+  </ul>
+</div>
+</div>
